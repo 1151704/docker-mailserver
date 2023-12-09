@@ -14,4 +14,11 @@ ADD conf/main.cf /
 ADD conf/startservices.sh /
 RUN chmod +x startservices.sh
 
+# SMTP Port
+EXPOSE 25
+# POP3 Port
+EXPOSE 110
+# IMAP Port
+EXPOSE 143
+
 ENTRYPOINT ["/startservices.sh"]
