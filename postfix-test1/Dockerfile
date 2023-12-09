@@ -2,8 +2,6 @@ FROM ubuntu:20.04
 
 ENV LAST_MODIFIED "2022-03-06 K Ellis"
 
-RUN hostnamectl set-hostname omarrm.com
-
 RUN apt-get update
 RUN apt-get install postfix bsd-mailx dovecot-pop3d rsyslog -y
 RUN apt-get upgrade bash -y
